@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ledger Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="quiz.js"></script>
+   <link rel="stylesheet" type="text/css" href="quiz.css">
+  </head>
+  <body>
+    <div class='question'>
+      <p>
+        Question 1.
+        Tick all that are true
+      </p>
+      <p>
+        <input type='checkbox' id='1a'>A) All accounts addresses can be recovered with your seed alone.</input>
+        </p>
+      <p>
+      <input type='checkbox' id='1b'>B) To recover your accounts you need your seed and your pin.</input>
+        </p>
+      <p>
+      <input type='checkbox' id='1c'>D) Even if someone gets their hands on your Ledger they wont be able to access your account.</input>
+        </p>
+      <p>
+      <input type='checkbox' id='1c'>E) Your seed can only be used in a Ledger product</input>
+        </p>
+    </div>
+    <div class='answer' id='answer1'>
+      Only A) is true.
+
+      Using your seed in any BIP44 compatible wallet will allow you to regerate all your accounts. Your pin is purely to secure your ledger itself. However should an adversary gain physical access to your ledger and you can not see what they have done then it should not be assumed your coins are safe.
+    </div>
+    <p>
+      <input type='submit' id="check1" value='Check Answer'>
+    </p>
+
+        <div class='question'>
+      <p>
+        Question 2.
+        When you first get your Ledger you should...
+      </p>
+      <p>
+        <input type='checkbox' id='2a'>A) Find your recovery sheet with in and use the seed you find on there</input>
+        </p>
+      <p>
+      <input type='checkbox' id='2b'>B) Have your Ledger generate a seed for you</input>
+        </p>
+      <p>
+      <input type='checkbox' id='2c'>D) Use the pin provided to unlock your Ledger</input>
+        </p>
+      <p>
+      <input type='checkbox' id='2c'>E) Ensure no one has scratched and revealed the seed before it reached you</input>
+        </p>
+    </div>
+    <div class='answer' id='answer2'>
+Several people have lost their money to scams like this. Your ledger should arrive unintialized, there will be a series of messages then it will allow you to restore or start fresh. <b>YOU SHOULD NOT USE A SEED UNLESS YOU ALONE SAW YOUR LEDGER GENERATE IT.</b> Seeds should not be provided by anyone. And no one will ever ask you for your seed. Your ledger should not be set up by the seller. There should not be a filled in recovery sheet. Or a scratch and reveal recovery sheet.
+    </div>
+    <p>
+      <input type='submit' id="check2" value='Check Answer'>
+    </p>
+    
+    <div class='question'>
+      <p>
+        Question 3.
+        Security of your coins: which of the following are true
+      </p>
+      <p>
+        <input type='checkbox' id='3a'>A) You can freely distribute your extended public key (xpub). It wont put your coins at risk</input>
+        </p>
+      <p>
+      <input type='checkbox' id='3b'>B) A single private key from a single wallet can make your entire ledger insecure</input>
+        </p>
+      <p>
+      <input type='checkbox' id='3c'>c) Together with a private key your xpub key can put your all coins on your ledger at risk</input>
+        </p>
+      <p>
+      <input type='checkbox' id='3d'>D) Your xpub and a private key will allow someone to steal all coins from a single account in single wallet due to hardened levels in the BIP44 path</input>
+        </p>
+    </div>
+    <div class='answer' id='answer3'>
+      Only D is true.
+      Your XPUB will allow someone to generate all your addresses in that wallet account. This is of great a privacy concern. Together with any single private key in that account they could regerate the other private keys! Until they reach a hardened level in the derivation path. These are denoted with ' for example m/44'/0'/1'.
+    </div>
+    <p>
+      <input type='submit' id="check3" value='Check Answer'>
+    </p>
+    <div class='question'>
+      <p>
+        Question 4.
+        Tick all that are true
+      </p>
+      <p>
+        <input type='checkbox' id='4a'>A) Even with malware on your PC your using your Ledger is always safe.</input>
+        </p>
+      <p>
+      <input type='checkbox' id='4b'>B) If you delete the app from your Ledger you will never be able to access the coins.</input>
+        </p>
+      <p>
+      <input type='checkbox' id='4c'>C) .</input>
+        </p>
+      <p>
+      <input type='checkbox' id='4c'>D) .</input>
+        </p>
+    </div>
+    <div class='answer' id='answer4'>
+    </div>
+    <p>
+      <input type='submit' id="check4" value='Check Answer'>
+    </p>
+
+    <div class='question'>
+      <p>
+        Question 5.
+        The year is 2156 and all the HODLers have died other than you. Finally it's time to sell your vertcoin. You lost your Ledger in the nuclear war of 2053. No worries you have your seed backuped and it was in the 6th account of your vertcoin wallet. How do you recover it?
+      </p>
+      <p>
+        <input type='checkbox' id='5a'>A) Put the derivation path m/44'/28'/5' in any compatible wallet.</input>
+        </p>
+      <p>
+      <input type='checkbox' id='5b'>B) Or was it m/44'/28'/6'</input>
+        </p>
+      <p>
+      <input type='checkbox' id='5c'>C) Wait that doesn't sound right... m/44'/128'/5' ?</input>
+        </p>
+      <p>
+      <input type='checkbox' id='5d'>D) No definitely m/44'/128'/6'.</input>
+        </p>
+    </div>
+    <div class='answer' id='answer5'>
+      It's C, the ledger uses 128 as the coinId for vertcoin and the account index starts at 0. So it's m/44'/128'/5'.
+    </div>
+    <p>
+      <input type='submit' id="check5" value='Check Answer'>
+    </p>
+
+
+  </body>
+</html>
